@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Python'</title>
+</head><body><b>Math.py------</b><br/>
+<br/>
+#!/usr/bin/env python3<br/>
+<br/>
+print(50 + 50) # add<br/>
+print (50 - 50) # subtract<br/>
+print(50 * 50) # multiply<br/>
+print( 50 / 50) #divide<br/>
+print (50 + 50 - 50 * 50 / 50) # PEMDAS<br/>
+print (50 ** 2) #raising to power. exponents<br/>
+print (50 % 6) #modulo, get remainder<br/>
+print( 50 // 6) # divides w/ no remainder<br/>
+<br/>
+<b>SCRIPT.py---------</b><br/>
+<br/>
+#!/usr/bin/env python3<br/>
+<br/>
+# Variables and modules<br/>
+quote = "All is fair in love and war"<br/>
+print(quote.upper()) # uppercase<br/>
+print(quote.lower()) # lowercase<br/>
+print(quote.title()) # title<br/>
+<br/>
+print(len(quote)) # gets length of quote<br/>
+<br/>
+name = "Heath" # string<br/>
+age = 30 # int<br/>
+gpa = 3.7 # float<br/>
+<br/>
+print(int(age)) # casting int as int<br/>
+print(int(30.9)) # casting float as int<br/>
+<br/>
+print("Hello, my name is " + name + " and I am " + str(age) + " years old!")<br/>
+<br/>
+age += 1<br/>
+print(age)<br/>
+<br/>
+birthday = 1<br/>
+age += birthday<br/>
+print(age)<br/>
+<br/>
+print('\n')<br/>
+<br/>
+# Functions<br/>
+print("This is an example of a function")<br/>
+<br/>
+def who_am_i():<br/>
+&nbsp; name = "Heath"<br/>
+&nbsp; age = 30<br/>
+&nbsp; print("My name is " + name + " and I am " + str(age) + " years old!")<br/>
+&nbsp; <br/>
+who_am_i()<br/>
+<br/>
+# adding params<br/>
+def add_one_hundred(num):<br/>
+&nbsp; print(num + 100)<br/>
+<br/>
+add_one_hundred(100)<br/>
+<br/>
+# multiple params<br/>
+def add(x,y):<br/>
+&nbsp; print(x + y)<br/>
+&nbsp; <br/>
+add(7,7)<br/>
+<br/>
+def multiply(x,y):<br/>
+&nbsp; print(x * y)<br/>
+&nbsp; <br/>
+multiply(7,7)<br/>
+<br/>
+def square_root(x):<br/>
+&nbsp; print(x ** 0.5)<br/>
+&nbsp; <br/>
+square_root(25)<br/>
+<br/>
+def nl():<br/>
+&nbsp; print('\n')<br/>
+&nbsp; <br/>
+nl()<br/>
+<br/>
+# boolean expressions (true/false)<br/>
+print("Boolean Expressions:")<br/>
+bool1 = True<br/>
+bool2 = 3 * 3 ==9<br/>
+bool3 = False<br/>
+bool4 = 3 * 3 !=9<br/>
+<br/>
+print(bool1,bool2,bool3,bool4)<br/>
+print(type(bool1))<br/>
+<br/>
+nl()<br/>
+<br/>
+# Relational and boolean expressions<br/>
+<br/>
+greater_than = 7 &gt; 5<br/>
+less_than = &nbsp;5 &lt; 7<br/>
+greater_than_equal_to = 7 &gt;= 7 <br/>
+less_than_equal_to = 7 &lt;= 7<br/>
+<br/>
+test_and1 = (7 &gt; 5) and (5 &lt; 7) &nbsp;# True<br/>
+test_and2 = (7 &lt; 5) and (7 &gt; 5) &nbsp;# False<br/>
+test_or = &nbsp;(7 &gt; 5) or (5 &lt; 7) &nbsp;# True<br/>
+test_or2 = (7 &lt; 5) or (5 &gt; 7) &nbsp;# False<br/>
+<br/>
+test_not = not True &nbsp;# False<br/>
+<br/>
+nl()<br/>
+<br/>
+# Conditional statements<br/>
+def drink(money):<br/>
+&nbsp; if money &gt;= 2:<br/>
+&nbsp; &nbsp; return "You've got yourself a drink"<br/>
+&nbsp; else:<br/>
+&nbsp; &nbsp; return "yeah, NO. get outta here"<br/>
+<br/>
+print(drink(2))<br/>
+print(drink(1))<br/>
+<br/>
+def alcohol(age,money):<br/>
+&nbsp; if (age &gt;= 21) and (money &gt;= 5):<br/>
+&nbsp; &nbsp; return "Lucky you, it's happy hour!"<br/>
+&nbsp; elif (age &gt;= 21 ) and (money &lt; 5):<br/>
+&nbsp; &nbsp; return "not enought bud"<br/>
+&nbsp; elif (age &lt; 21) and (money &gt;= 5):<br/>
+&nbsp; &nbsp; return "Nice try kid"<br/>
+&nbsp; else:<br/>
+&nbsp; &nbsp; return "You're broke and too young"<br/>
+&nbsp; <br/>
+print(alcohol(21,5))<br/>
+print(alcohol(21,4))<br/>
+print(alcohol(20,4))<br/>
+&nbsp; <br/>
+nl()<br/>
+<br/>
+# lists []<br/>
+movies = ["Hangover", "The Perkins", "Spiderman 3"]<br/>
+&nbsp; <br/>
+print(movies[1]) # returns the second item<br/>
+print(movies[0]) # returns the first item<br/>
+print(movies[1:4])<br/>
+print(movies[1:])<br/>
+print(movies[:2])<br/>
+print(movies[-1]) <br/>
+<br/>
+print(len(movies))<br/>
+movies.append("JAWS")<br/>
+print(movies)<br/>
+<br/>
+movies.pop()<br/>
+print(movies)<br/>
+<br/>
+movies.pop(0)<br/>
+print(movies)<br/>
+<br/>
+nl()<br/>
+<br/>
+# Tuples - static, ()<br/>
+grades = ("a", "b", "c", "d", "f")<br/>
+print(grades[1])<br/>
+<br/>
+nl()<br/>
+<br/>
+# Loops<br/>
+vegetables = ["cucumber", "spinach", "cabbage"]<br/>
+for x in vegetables:<br/>
+&nbsp; &nbsp; print(x)<br/>
+&nbsp; &nbsp; <br/>
+# While loops - execute so long as true<br/>
+i = 1<br/>
+while i &lt; 100:<br/>
+&nbsp; print(i)<br/>
+&nbsp; i+=1<br/>
+<br/>
+<br/>
+<br/>
+</body></html>
